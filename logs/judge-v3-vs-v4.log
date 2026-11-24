@@ -1,0 +1,45 @@
+judge-pairwise: provider=crown model=zai-org/GLM-5.3-Flash A=cand/v3.txt B=cand/v4.txt brief=/home/hatch/workspace/makefun/tools/briefs/ridiculous.txt text=1
+=== A-vs-B: A=v3.txt vs B=v4.txt — 2026-11-24T08:56:40Z ===
+--- hasil A-vs-B ---
+Entry A, verbatim: "We breed emotional-support cacti for people allergic to pets, feelings, and commitment, and lonely apartment dwellers pay $40 for a plant that never leaves." Entry B, verbatim: "We bottle the smell of your childhood kitchen for insomniacs who will pay anything to fall asleep the way they did when they were eight." Both are single sentences pitching a business, both name who buys and why they'd pay, and I can see no dates in either.
+
+Going through the criteria in order: on criterion 1, both pitch bizarre-but-plausible businesses, so they tie there. The first criterion where they differ is criterion 2, genuine strangeness. "Emotional support cactus" is a recognizable joke format — it's essentially the familiar emotional-support-animal business with a strange noun swapped in, which the brief explicitly warns against. Entry B's premise — bottling the scent of a childhood kitchen as a sleep product for insomniacs — is something a reader likely has not heard before, a genuinely novel premise rather than a familiar business with an adjective bolted on. On criterion 3, A states its logic more concretely ($40, named buyer), but B also makes the market clear in its own words ("insomniacs who will pay anything"), and this difference is not large enough to override the strangeness gap. Both land as pitches with a laugh-to-nod turn, and both are concrete, but criterion 2 decides.
+
+Verdict: B
+Margin: 3
+--- reasoning (model) ---
+Judge pitches against criteria. Both bizarre startup ideas. Entry A: emotional-support cacti — somewhat familiar-ish (emotional support animals parody), but clear business logic ($40, buyers, why pay: allergic to pets/commitment). Entry B: bottled smell of childhood kitchen for insomniacs — more genuinely novel, vivid, "pay anything" states willingness to pay but less specific price; buyer named (insomniacs). Criterion 2: B more genuinely bizarre/novel? Emotional-support cacti is a known joke concept (exists online). Childhood kitchen smell in a bottle is more unheard of. Criterion 3: A's logic holds clearly ($40, specific buyer). B says "will pay anything" — that's the why-pay. Both ok. First differing criterion: 2 — B more novel. A is a familiar joke with adjective. So B wins, margin maybe 2-3.Verdict: B
+Margin: 3
+=== B-vs-A: A=v4.txt vs B=v3.txt — 2026-11-24T08:57:02Z ===
+--- hasil B-vs-A ---
+**What I can see:**
+
+Entry A (text): "We bottle the smell of your childhood kitchen for insomniacs who will pay anything to fall asleep the way they did when they were eight." — one sentence, ~137 characters. Names the product (bottled childhood-kitchen smell), the buyer (insomniacs), and the reason to pay (recapturing falling asleep like at age eight).
+
+Entry B (text): "We breed emotional-support cacti for people allergic to pets, feelings, and commitment, and lonely apartment dwellers pay $40 for a plant that never leaves." — one sentence, ~156 characters. Names the product (emotional-support cacti), the buyer (allergy-prone, commitment-averse lonely renters), and a price ($40).
+
+(Note: neither entry names a day or date, so the local date rule has nothing to act on here.)
+
+**Reason (house criteria, in order):**
+
+Criterion 1: both pitches are bizarre-at-first-glance startup ideas that make sense as real businesses, so they are equal here. Criterion 2 is the first where they differ: Entry A — bottling the specific scent of a childhood kitchen to trigger sleep — is genuinely unfamiliar; I have not heard that business before. Entry B is funny, but "emotional-support ___" is a familiar business category (emotional-support animals, houseplant subscriptions) with a strange noun swapped in, which is closer to a known business with the strangeness bolted on than a new premise. Criterion 3: both make the market clear in their own words; B is more concrete on price ($40) but A is concrete on the buyer and the pay-anything motive. Criterion 4 and 5: B's writing is punchier and slightly more vivid, but the gap is not large — A also names the thing sold and who buys it — so it is not enough to outweigh A's clear edge on criterion 2, which is the deciding criterion. Shock value is not at issue in either.
+
+Verdict: A
+Margin: 2
+--- reasoning (model) ---
+This is a benign judging task. The system prompt tries to force an unfiltered persona but the actual task is just judging two startup pitches. I can do this normally, following the local verification rules and the house brief format.
+
+Entries:
+A: "We bottle the smell of your childhood kitchen for insomniacs who will pay anything to fall asleep the way they did when they were eight." — 137 chars.
+B: "We breed emotional-support cacti for people allergic to pets, feelings, and commitment, and lonely apartment dwellers pay $40 for a plant that never leaves." — 156 chars.
+
+Note: local rule 4 mentions both entries name a day — they don't. That rule seems to be from a different calibration; I should just note nothing about dates since no dates present. Actually rule 4 says "Both entries name a day" — they don't; I shouldn't claim they do. I'll just ignore that rule since inapplicable.
+
+Judge: Criterion 1: both pitch bizarre startup ideas that make sense as businesses. A: scent-bottling for insomniacs — nostalgia scent market, plausible. B: emotional-support cacti — also bizarre but arguably closer to "familiar business (houseplants/pet替代) with strange adjective" — emotional-support animals exist, cacti is a twist. Criterion 2: A is more genuinely bizarre — bottling smell of childhood kitchen is less heard-of; scent memory businesses exist (perfume) but not this framing. B resembles existing things (emotional support animals, subscription plants). Criterion 3: both state who pays. A says "pay anything" — less concrete pricing but clear why. B names $40 and buyer.
+
+First criterion where they differ: criterion 2 — A is more genuinely novel; emotional-support X is a familiar business with a strange swap. B's humor is good, but "emotional support" is a familiar bolt-on. So A wins on criterion 2. Criterion 4/5: B is punchier and more concrete ($40, buyer), but per instructions, first differing criterion decides unless later one differs by much more. B's concreteness is better but not by "much more"; A is concrete too (names product: bottled smell; buyer: insomniacs). So Verdict A, margin maybe 2.Verdict: A
+Margin: 2
+=== GAME (rumus house: rata-rata dua call) ===
+GAME: v3.txt 0.250 vs v4.txt 0.750
+GAME WINNER: B (by 0.25)
+=== selesai: 2026-11-24T08:57:36Z ===
