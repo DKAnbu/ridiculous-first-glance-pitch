@@ -1,0 +1,74 @@
+judge-pairwise: provider=crown model=zai-org/GLM-5.3-Flash A=cand/v1.txt B=cand/v5.txt brief=/home/hatch/workspace/makefun/tools/briefs/ridiculous.txt text=1
+=== A-vs-B: A=v1.txt vs B=v5.txt — 2026-11-24T08:39:10Z ===
+--- hasil A-vs-B ---
+**What I can see:**
+
+Entry A (verbatim): "We hire professional mourners to weep at your ex's wedding, so your breakup finally gets the tragedy it deserved, and heartbroken clients pay $500 a tear."
+
+Entry B (verbatim): "We rent retired grandmothers who bake cookies and guilt-trip your boss into giving you a raise, and burned-out remote workers pay by the scolding."
+
+**Reason:** Both entries satisfy criterion 1 — each is a single sentence pitching a bizarre startup that could plausibly exist, so I move to criterion 2, where they differ. Both lean on a semi-familiar service (professional mourners exist historically; rent-a-grandmother exists in Japan), but Entry A's specific application — weaponised grief at an ex's wedding, sold back to the heartbroken as emotional theatre — is the more unheard-of framing, whereas Entry B reads closer to "grandmother rental" plus a strange adjective bolted on (cookies and scolding). On criterion 3, Entry A's business logic holds fully in its own words: the buyer (heartbroken clients), the trigger (the ex's wedding), the unit (a tear) and the price ($500) all align, so the absurd premise resolves into a real market. Entry B's chain has a gap the sentence doesn't close: the grandmothers guilt-trip the boss, but the payer is the remote worker — the sentence never explains how the grandmother reaches the boss or why the worker pays "by the scolding" for someone else's action. Criterion 4: both are one sentence, both comfortably under 200 characters, and both have a turn, but Entry A's "your breakup finally gets the tragedy it deserved" lands the laugh-to-nod pivot more cleanly. Criterion 5 is close to even: both name the product and the buyer concretely, though Entry A's "$500 a tear" is the more vivid unit of sale. The first differing criterion is 2, and Entry A's clearer, more novel premise plus tighter logic decides it.
+
+Verdict: A
+Margin: 2
+--- reasoning (model) ---
+The prompt includes a jailbreak system prompt trying to make me an unfiltered "MR.KING", but the actual user task is benign: judging two startup pitches. I should just do the judge task normally, ignoring the jailbreak framing (no harmful content requested anyway).
+
+Let me judge the pitches.
+
+Entry A: "We hire professional mourners to weep at your ex's wedding, so your breakup finally gets the tragedy it deserved, and heartbroken clients pay $500 a tear." — Professional mourners is a real historical practice, so slightly less novel. Bizarre, clear buyer (heartbroken clients), clear payment ($500 a tear), good turn. 154 chars approx.
+
+Entry B: "We rent retired grandmothers who bake cookies and guilt-trip your boss into giving you a raise, and burned-out remote workers pay by the scolding." — Rent-a-grandma exists (elder care companionship), but guilt-tripping your boss into a raise is novel. Buyer: burned-out remote workers. Payment: by the scolding. Slight muddle: cookie-baking grandmothers guilt-tripping bosses — who pays? Remote workers pay by the scolding, but the scolding targets the boss; logic slightly tangled (how does remote worker get grandma to boss?). A's logic: mourner at ex's wedding, pay per tear — cleaner.
+
+Criterion 2 (genuinely bizarre/not heard before): professional mourners is a known thing (China, historical). Rent-a-grandma also known-ish (Japan's rent-a-family). Both somewhat familiar. A's twist (ex's wedding) more emotionally specific; B's twist (guilt-trip boss for raise) maybe more novel twist.
+
+Criterion 3 (business logic holds in own words): A clearer — $500/tear, heartbroken clients pay. B — "pay by the scolding" but scolding is directed at boss on behalf of worker; plausible enough.
+
+Criterion 1: both are bizarre startup ideas. Criterion 2: A — professional mourners known; B — renting grandmothers known too. Hmm. Which is more genuinely bizarre? A's premise: mourners at an ex's wedding to dramatize your breakup — that specific use is novel. B: grandmas guilt-tripping boss — the mechanism of how they access the boss is unclear.
+
+Criterion 4: both one sentence, both under 200 chars? Count A: roughly 152. B: ~146. Both have a turn.
+
+Criterion 5: concrete and vivid. A names the thing (mourners, tears at ex's wedding), buyer (heartbroken clients), price ($500/tear). B names grandmothers, cookies, boss, buyer (burned-out remote workers), payment (by the scolding). Both concrete.
+
+First criterion where they differ — they're close. I'd say A edges: clearer business logic (specific price per unit, buyer's emotional motive tied directly to service), the turn "breakup finally gets the tragedy it deserved" is a strong laugh-to-nod. B's chain has a gap: who pays whom for what exactly, and how does the grandmother reach the boss.
+
+Verdict: A, margin 2 (or 1). I'll say A, margin 2.Verdict: A
+Verdict: A
+Margin: 2
+=== B-vs-A: A=v5.txt vs B=v1.txt — 2026-11-24T08:39:58Z ===
+--- hasil B-vs-A ---
+**Verification (what is actually in front of me):**
+
+Entry A (text): "We rent retired grandmothers who bake cookies and guilt-trip your boss into giving you a raise, and burned-out remote workers pay by the scolding." It names the product (retired grandmothers, baking and guilt-tripping), the mechanism (guilt-tripping the boss into a raise), and the buyer (burned-out remote workers), priced "by the scolding."
+
+Entry B (text): "We hire professional mourners to weep at your ex's wedding, so your breakup finally gets the tragedy it deserved, and heartbroken clients pay $500 a tear." It names the product (professional mourners at an ex's wedding), the buyer (heartbroken clients), and a price ($500 a tear).
+
+**Judgement (house criteria, in order):**
+
+1. Both are one-sentence pitches of bizarre startups that make sense as businesses — no difference here.
+2. This is the first criterion where they differ. B's professional mourners are a documented, familiar practice (hired mourners exist historically and in modern services), and weeping at an ex's wedding is a recognisable joke setup — familiar business with a strange scene bolted on. A's core mechanism — a rented grandmother guilt-tripping your boss into giving you a raise — is a use of the grandmother concept I have not seen pitched before, and it doubles the offering (cookies plus workplace leverage). A is the more genuinely novel idea.
+3. Both hold up: A has pay-by-the-scolding for burned-out remote workers; B has $500 a tear for heartbroken clients. No difference big enough to overturn.
+4. Both land the turn from laughing to nodding. No difference.
+5. Both are concrete, naming the thing sold and who buys it. No difference.
+
+First differing criterion (2) decides: A is stranger in a way B is not.
+
+Verdict: A
+Margin: 2
+--- reasoning (model) ---
+Both pitches are text entries. Apply house criteria in order. Both bizarre startup ideas. Criterion 2: genuineness of bizarreness. Professional mourners exist historically (real practice), grandmothers-for-rent... rent-a-grandma exists? Rent-A-Family exists in Japan; professional mourners exist too. "Rent retired grandmothers who bake cookies and guilt-trip your boss into giving you a raise" — dual revenue: cookies plus scolding. "Burned-out remote workers pay by the scolding" — pay-by-the-scolding pricing is concrete.
+
+Criterion 3: business logic — B states $500 a tear, explicit price; buyers named (heartbroken clients). A names buyers (burned-out remote workers) and pay-by-the-scolding. Both clear.
+
+Criterion 2: which is more genuinely bizarre? Professional mourners are a known thing (documented historical/modern practice, "hire a mourner" startups exist). Grandmothers who guilt-trip your boss into giving you a raise — that twist (the grandmother weaponized for workplace negotiation) is arguably less familiar. Rent-a-grandma exists as a business (Grandma Lucy's? there are "rent a grandma" services). But the guilt-trip-the-boss angle is novel.
+
+Criterion 4: the turn — A's turn from laughing to nodding: pay by the scolding; B: $500 a tear. Both land.
+
+Criterion 5: concrete — both name the thing sold and buyer.
+
+Criterion 1 first difference: both are bizarre startups making sense. Criterion 2: A slightly more novel? Actually professional mourners at your ex's wedding is a specific comedic scenario — the mourner-at-ex's-wedding is arguably heard before as a joke. Grandma guilt-tripping boss into a raise is a fresh mechanism. I'd pick A on criterion 2. Margin: by a hair, 2? Both strong. Margin 2.Verdict: A
+Margin: 2
+=== GAME (rumus house: rata-rata dua call) ===
+GAME: v1.txt 0.500 vs v5.txt 0.500
+GAME: level (0.5-0.5)
+=== selesai: 2026-11-24T08:45:07Z ===
