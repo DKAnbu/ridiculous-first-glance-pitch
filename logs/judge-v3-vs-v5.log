@@ -1,0 +1,74 @@
+judge-pairwise: provider=crown model=zai-org/GLM-5.3-Flash A=cand/v3.txt B=cand/v5.txt brief=/home/hatch/workspace/makefun/tools/briefs/ridiculous.txt text=1
+=== A-vs-B: A=v3.txt vs B=v5.txt — 2026-11-24T08:57:36Z ===
+--- hasil A-vs-B ---
+**What I can see:**
+
+- **Entry A (exact text):** "We breed emotional-support cacti for people allergic to pets, feelings, and commitment, and lonely apartment dwellers pay $40 for a plant that never leaves." — One sentence, under 200 characters. It names the product (emotional-support cacti), the buyer (lonely apartment dwellers), the price ($40), and a reason it works (the plant never leaves).
+- **Entry B (exact text):** "We rent retired grandmothers who bake cookies and guilt-trip your boss into giving you a raise, and burned-out remote workers pay by the scolding." — One sentence, under 200 characters. It names the service (renting retired grandmothers), two concrete deliverables (cookies, guilt-tripping the boss into a raise), the buyer (burned-out remote workers), and the payment model (pay by the scolding).
+
+**Reason:** Going through the criteria in order. Criterion 1: both pitch a bizarre-yet-plausible business, so no separation. Criterion 2 is the first where they differ: A's "emotional-support cacti" leans on the very familiar "emotional-support [animal]" template with a plant swapped in, whereas B's rentable grandmothers who deliver both baked goods and workplace leverage is a more genuinely unheard premise — the strangeness does more work. Criterion 3 also favors B: both state why someone pays, but B's "pay by the scolding" makes the monetization itself part of the joke-to-business turn, and the guilt-trip-into-a-raise mechanism gives a tangible return on spend. Criterion 4: B has the sharper turn from laughing to nodding (the raise is the nod). Criterion 5 is roughly even — both are concrete with named buyers and products. Shock for its own sake is absent from both; neither wins on that. B wins on the first differing criterion (2), reinforced by 3 and 4.
+
+Verdict: B
+Margin: 2
+--- reasoning (model) ---
+Both are bizarre startup pitches. Compare per criteria.
+
+1. Both are bizarre-sounding yet real business.
+2. Genuinely bizarre, not familiar with adjective. Both fairly original. "Emotional-support cacti" — emotional support animals is a familiar concept; cacti is a twist but "emotional-support X" is a known template. "Rent retired grandmothers" — renting grandma is more novel; "pay by the scolding" is a vivid monetization. Grandma rental services exist somewhat (rent-a-family in Japan), but as a pitch it's fresh. Emotional-support cacti — emotional support plants actually exist-ish. Both are somewhat familiar templates. Hmm.
+
+3. Business logic: A states buyer (lonely apartment dwellers) and price ($40) and why it makes sense (never leaves, no allergies). B states buyer (burned-out remote workers), payment model (by the scolding), and dual value (cookies + raise via guilt-tripping boss). B's "guilt-trip your boss into giving you a raise" is the turn — laughing to nodding, clear why someone pays. A also has "a plant that never leaves" — commitment joke.
+
+4. Pitch landing: B has a stronger turn.
+
+2 is the first criterion where they differ: A leans on "emotional-support" template; B's grandma rental is more unheard. Actually both use templates. B slightly more bizarre. But B echoes rent-a-family; A's emotional-support-X is arguably more familiar. I'd say B edges criterion 2, and criterion 3-4 B stronger too. Verdict B, margin 2.Verdict: B
+Margin: 2
+=== B-vs-A: A=v5.txt vs B=v3.txt — 2026-11-24T08:58:47Z ===
+--- hasil B-vs-A ---
+**What I can see:**
+
+Entry A (exact text): "We rent retired grandmothers who bake cookies and guilt-trip your boss into giving you a raise, and burned-out remote workers pay by the scolding."
+
+Entry B (exact text): "We breed emotional-support cacti for people allergic to pets, feelings, and commitment, and lonely apartment dwellers pay $40 for a plant that never leaves."
+
+Both are single sentences, both under 200 characters, both name a product and a buyer. Neither image or extra content is present — text only.
+
+**Reasoning through the house criteria in order:**
+
+1. Both pitch a bizarre startup idea that sounds ridiculous at first glance yet could be a real business — no difference here.
+2. Genuinely bizarre: this is the first criterion where they differ. Entry B's core construction — "emotional-support [X]" — is a familiar joke template (emotional-support animals and their variants are widely known), so the cactus reads as a known formula with the noun swapped. Entry A's mechanism is more novel: grandmothers as an on-demand service whose specific paid function is baking cookies and guilt-tripping a boss into a raise — an outcome and delivery mechanism a reader has not encountered as a business. A is the stranger idea.
+3. Business logic: Entry B is slightly cleaner — named buyer, named price ($40), and a clear reason to pay (allergy, loneliness, zero maintenance). Entry A also names its buyer (burned-out remote workers) and its payment model (pay by the scolding), so the gap here is real but not "much more" than A's bizarreness advantage.
+4. Both land as pitches with a turn ("pay by the scolding" vs. "$40 for a plant that never leaves") — comparable.
+5. Both are concrete and vivid, naming what is sold and who buys it — comparable.
+
+Criterion 2 is the first and deciding difference: B's strangeness is partly borrowed from a familiar template, A's is its own.
+
+Verdict: A
+Margin: 2
+--- reasoning (model) ---
+Verify both entries, compare per criteria.
+
+Entry A: quote text. Entry B: quote text.
+
+Criterion 1: both pitch bizarre startup ideas. Both qualify. Criterion 2: genuinely bizarre — grandmothers for hire to guilt-trip bosses is strange; emotional-support cacti is arguably closer to a familiar thing (emotional-support animals) with a strange swap (cactus). Grandmother rental is a known gag but guilt-tripping your boss into a raise is a novel twist. Hmm. Criterion 2 says "not a familiar business with a strange adjective bolted on." Emotional-support cacti — "emotional support [X]" is a familiar pattern (emotional-support animals/peacock memes), so swapping in cacti is a known joke. Grandmothers as a service — "rent-a-grandma" also somewhat known. But the specific business mechanism differs.
+
+Criterion 3: business logic. B is very clear: allergic to pets/feelings/commitment, lonely dwellers pay $40 for a plant that never leaves — clear buyer, clear price, clear why. A: burned-out remote workers pay by the scolding — buyer clear, payment model "by the scolding" is vivid and clear-ish, but the causal link between grandma cookies and boss raise is fuzzy — who pays for the raise outcome? Actually the buyer pays by the scolding, meaning they pay for the guilt-trip service. It's reasonably clear.
+
+Criterion 4: one sentence, under 200 chars, turn from laughing to nodding. Both qualify. A has a nice turn ("pay by the scolding"). B has "$40 for a plant that never leaves."
+
+Criterion 5: concrete and vivid — both name product and buyer. B names price ($40). A names the thing (grandmothers, cookies, guilt-trip, raise).
+
+Criterion 1: does A's business logic hold in its own words? The value prop is mixed: cookies + guilt-trip into a raise. It makes sense as gag service. B is cleaner: loneliness + allergy + commitment-phobia, $40 one-time.
+
+Criterion 2 first difference: which is more genuinely bizarre? Emotional-support cacti feels like a familiar meme format ("emotional-support X" is a very familiar construction). Retired grandmothers rented to guilt-trip bosses is a more unexpected combination — the paid outcome is a raise via scolding. I'd say A is more bizarre/original. But criterion 3: B's logic holds more obviously. Criterion order: 2 decides before 3 unless a later one differs by much more.
+
+A's logic: "burned-out remote workers pay by the scolding" — why would a scolding from grandma get you a raise? It's whimsical but the buyer and payment are named. B's logic is airtight. Does B's business-logic advantage differ "by much more" than A's bizarreness advantage? I'd say B's logic edge is modest — A also has clear buyer and payment. So criterion 2 decides: A is more bizarre.
+
+Hmm, but one could argue cacti for the allergic is bizarre too. Yet "emotional-support" prefix is a familiar joke template — criterion 2 explicitly penalizes "familiar business with a strange adjective bolted on" — emotional-support is literally an adjective phrase bolted onto cacti. That fits the penalty. A wins on criterion 2.
+
+Margin: 2 (clearly, not overwhelming).Verdict: A
+Margin: 2
+Margin: 2
+=== GAME (rumus house: rata-rata dua call) ===
+GAME: v3.txt 0.300 vs v5.txt 0.700
+GAME WINNER: B (by 0.2)
+=== selesai: 2026-11-24T08:59:18Z ===
