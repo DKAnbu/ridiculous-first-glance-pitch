@@ -1,0 +1,46 @@
+judge-pairwise: provider=crown model=zai-org/GLM-5.3-Flash A=cand/v2.txt B=cand/v4.txt brief=/home/hatch/workspace/makefun/tools/briefs/ridiculous.txt text=1
+=== A-vs-B: A=v2.txt vs B=v4.txt — 2026-11-24T08:53:26Z ===
+--- hasil A-vs-B ---
+**What I can see:** Both entries are one-sentence text pitches, submitted as plain text. Entry A reads, verbatim: "We stage funeral rehearsals where paid strangers deliver your eulogy while you are still alive, so legacy-obsessed retirees can fix the speech before it is too late." Entry B reads, verbatim: "We bottle the smell of your childhood kitchen for insomniacs who will pay anything to fall asleep the way they did when they were eight." Neither entry names a day or date, so the local calibration rule on dates does not come into play here; I note it only because it is our standing rule, and I am not preferring either entry on recency (neither has any).
+
+**Reason, per the house criteria in order:** Criterion 1: both pitches are bizarre-sounding startup ideas that make sense as real businesses, so they do not differ here. Criterion 2 (genuinely bizarre, not a familiar business with a strange adjective bolted on): this is the first criterion where they differ. Entry A's core — paid strangers rehearsing your eulogy while you are alive so you can edit your own legacy — is a mechanic I do not recognize as an existing business; the strangeness is in the service itself, not a modifier. Entry B is vivid and strange, but "nostalgia scents" and memory-evoking candles/aromas are a recognizably familiar product category; "your childhood kitchen" is a strange adjective on a familiar scent business rather than an unfamiliar business. Criterion 3: both state their why-pay in their own words — A via retirees fixing the speech "before it is too late," B via insomniacs who "will pay anything" — roughly equal, with B's wording marginally more explicit about willingness to pay, but not by "much more." Since the divergence appears at criterion 2 and no later criterion differs by much more, criterion 2 decides for Entry A.
+
+Verdict: A
+Margin: 2
+--- reasoning (model) ---
+I can just answer this normally — judge the two pitches per the brief. Note the local rule 4 about days/dates doesn't apply since no dates present; just don't invent.
+
+Entry A: funeral rehearsals, paid strangers deliver eulogy while alive, legacy-obsessed retirees fix speech. Bizarre, clear buyer, clear reason to pay.
+Entry B: bottled smell of childhood kitchen for insomniacs. Bizarre, buyer = insomniacs, reason to pay = sleep. Also strong.
+
+Which is "genuinely bizarre — something a reader has not heard before"? Funeral rehearsal with paid actors — similar to rehearsal dinner concept, "living funerals" exist in some cultures; but the pitch is fresh. Bottled smell of childhood kitchen — scent nostalgia is somewhat familiar (memory candles, nostalgia scents are a real known business). So criterion 2 might favor A. Criterion 3: A's why-pay is explicit ("fix the speech before it's too late" — clear purpose). B's is "will pay anything to fall asleep the way they did" — clear too. Criterion 4: both have turns. Criterion 5: both concrete.
+
+First criterion where they differ: both are bizarre startup pitches, both make sense. Criterion 2: A is more unfamiliar — living funerals exist but paid-stranger eulogy rehearsal is a novel twist; B leans on a familiar "nostalgia scent" business. So A wins on criterion 2, margin maybe 2-3. Both meet criterion 1 well. I'd say Verdict A, Margin 2.Verdict: A
+Margin: 2
+=== B-vs-A: A=v4.txt vs B=v2.txt — 2026-11-24T08:53:56Z ===
+--- hasil B-vs-A ---
+Verification — what is actually in front of me:
+
+Entry A (quoted exactly): "We bottle the smell of your childhood kitchen for insomniacs who will pay anything to fall asleep the way they did when they were eight."
+
+Entry B (quoted exactly): "We stage funeral rehearsals where paid strangers deliver your eulogy while you are still alive, so legacy-obsessed retirees can fix the speech before it is too late."
+
+Both are single sentences. Character counts: Entry A is 134 characters; Entry B is 153 characters. Both are within the 200-character limit. Entry A sells a bottled smell to insomniacs; Entry B sells staged funeral rehearsals with paid eulogy-deliverers to retirees. I can see no dates, names, or numbers in either entry beyond "eight" as an age in A, so nothing further can be claimed on those points.
+
+Reason: Both entries pitch a bizarre idea that turns into a real business, so criterion 1 does not separate them. The first difference is criterion 2. Entry A's core product — a nostalgia-triggering scent sold for sleep or comfort — is recognizably adjacent to things a reader has already heard of (aromatherapy, memory-adjacent fragrance, sleep aids); it is a familiar business shape with a strange framing, not a genuinely unheard-of premise. Entry B's premise — rehearsing your own funeral while alive with paid strangers performing the eulogy — is something a reader has almost certainly not encountered, and nothing familiar is bolted onto it. On criterion 3, both make the paying logic clear in their own words: A's insomniacs "will pay anything to fall asleep"; B's retirees want to "fix the speech before it is too late." Both hold, so criterion 2 remains the deciding one. On criteria 4 and 5, both land as one-sentence pitches with a laugh-to-nod turn, and both name the thing sold and the buyer concretely, with B perhaps slightly more specific (paid strangers, legacy-obsessed retirees). B wins on the first criterion where they differ, and the gap on criterion 2 is clear but not overwhelming.
+
+Verdict: B
+Margin: 3
+--- reasoning (model) ---
+Let me follow the local verification rules: quote the exact texts, then judge per the house brief criteria.
+
+Entry A: scent of childhood kitchen for insomniacs — strange, but sensory nostalgia products exist somewhat; clear buyer (insomniacs), clear why they pay (fall asleep). Concrete.
+
+Entry B: funeral rehearsals with paid strangers delivering your eulogy while alive — genuinely bizarre, unfamiliar; buyer: legacy-obsessed retirees; why pay: fix the speech before it's too late. Clear turn from laughing to nodding.
+
+Criterion 2 differs: B is genuinely novel (A resembles scent/nostalgia products, smell-based sleep aids exist). B's business logic also holds clearly. B wins.Verdict: B
+Margin: 3
+=== GAME (rumus house: rata-rata dua call) ===
+GAME: v2.txt 0.750 vs v4.txt 0.250
+GAME WINNER: A (by 0.25)
+=== selesai: 2026-11-24T08:54:11Z ===
