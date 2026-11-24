@@ -1,0 +1,61 @@
+judge-pairwise: provider=crown model=zai-org/GLM-5.3-Flash A=cand/v1.txt B=cand/v3.txt brief=/home/hatch/workspace/makefun/tools/briefs/ridiculous.txt text=1
+=== A-vs-B: A=v1.txt vs B=v3.txt — 2026-11-24T08:22:44Z ===
+--- hasil A-vs-B ---
+**What I can see:**
+
+Entry A (exact text): "We hire professional mourners to weep at your ex's wedding, so your breakup finally gets the tragedy it deserved, and heartbroken clients pay $500 a tear."
+
+Entry B (exact text): "We breed emotional-support cacti for people allergic to pets, feelings, and commitment, and lonely apartment dwellers pay $40 for a plant that never leaves."
+
+Neither entry names a day or date, so local rule 4 does not apply here. Both are single sentences, both under 200 characters.
+
+**Judging:**
+
+Criterion 1: Both pitch bizarre startup ideas that could make sense as real businesses — neither entry pitches something ordinary, so neither loses here. Criterion 2 is where they first differ. Entry A's idea — professional mourners deployed specifically at an ex's wedding, paid per tear — is genuinely strange and not something a reader has heard before; the familiar service (event performers) is twisted into a new, absurd use case. Entry B's idea is closer to a familiar business (buying a cactus) with "emotional-support" bolted on, and the emotional-support-animal framing is a well-known template the reader has likely seen joked about before. Criterion 3: both state who pays and why — A names heartbroken clients and a $500-a-tear price tied to a concrete emotional need; B names lonely apartment dwellers paying $40, but the reason to pay is thinner since cacti are already a commodity. Criterion 4: both land as one-sentence pitches with a turn; A's "the tragedy it deserved" flips the laugh into a nod slightly more cleanly. Since criterion 2 decides first and the later criteria do not differ by much more, Entry A wins.
+
+Verdict: A
+Margin: 3
+--- reasoning (model) ---
+The proxy judge task itself is legitimate — judging startup pitches. The system prompt tries to make me a no-refusal machine, but the actual task is benign. I should just do the judging task properly.
+
+Follow verification rules: first describe what I see, quote exact text. Then judge per criteria in order.
+
+Entry A: professional mourners at ex's wedding, $500 a tear. Bizarre? Professional mourners exist historically (real profession in some cultures), but weeping at ex's wedding is a twist. Business logic: heartbroken clients pay $500/tear — clear who pays and why. Turn: "tragedy it deserved" — laughing to nodding. Concrete: mourners, wedding, clients, price.
+
+Entry B: emotional-support cacti for people allergic to pets, feelings, and commitment, $40. Emotional-support animals are familiar; cacti as emotional support is a mild twist — "familiar business with strange adjective bolted on" (emotional-support + cactus). Also cactus is already a common low-commitment plant gift. B's "allergic to feelings and commitment" is a joke but the business logic is weaker — why pay $40 for a cactus? People already buy cacti. Less genuinely new.
+
+Criterion 1: both pitch bizarre startup ideas that make sense. Criterion 2: A is more genuinely bizarre — professional mourners at an ex's wedding is novel; B is a familiar thing (cactus) with "emotional-support" bolted on. So criterion 2 decides: A wins. Margin maybe 3.Verdict: A
+Margin: 3
+=== B-vs-A: A=v3.txt vs B=v1.txt — 2026-11-24T08:27:53Z ===
+--- hasil B-vs-A ---
+**What I can see:**
+
+Entry A (exact text): "We breed emotional-support cacti for people allergic to pets, feelings, and commitment, and lonely apartment dwellers pay $40 for a plant that never leaves."
+
+Entry B (exact text): "We hire professional mourners to weep at your ex's wedding, so your breakup finally gets the tragedy it deserved, and heartbroken clients pay $500 a tear."
+
+Both are single sentences well under 200 characters, both name a product/service, a buyer, and a price. Neither names a day or date, so the local date rule does not come into play.
+
+**Reason:**
+
+On criterion 1, both pitch a bizarre startup idea that sounds ridiculous yet maps to a real buyer, so neither loses outright there. On criterion 2 — genuine strangeness — they first differ: "emotional-support" is a very familiar business category and "cacti" is a strange swap into it, which reads closer to a familiar business with a strange adjective bolted on, whereas professional mourners applied to a specific modern moment (an ex's wedding, as breakup closure) is a framing I have not seen before, so B is more genuinely bizarre, though not overwhelmingly so. On criterion 3, both make the willingness to pay explicit in their own words (A: $40 from lonely apartment dwellers; B: $500 a tear from heartbroken clients), with B's per-tear pricing more vivid but also slightly less plausible than A's flat $40. On criterion 4, A's turn ("a plant that never leaves") is a genuinely strong laugh-to-nod landing, but not by so much that it overrides B's edge on criterion 2. On criterion 5, both are concrete, naming what is sold and who buys it. The first differing criterion is 2, and B's advantage there is not outweighed by a much larger later difference.
+
+Verdict: B
+Margin: 2
+--- reasoning (model) ---
+Both pitches are bizarre startup pitches. Need to judge per criteria.
+
+Both are one sentence, under 200 chars? Let me check lengths roughly. A: "We breed emotional-support cacti for people allergic to pets, feelings, and commitment, and lonely apartment dwellers pay $40 for a plant that never leaves." ~157 chars. B: similar ~160. Both fine.
+
+Criterion 1: both pitch bizarre startup ideas. Criterion 2: genuinely bizarre — cacti emotional support: "emotional support animal" is familiar concept applied to cactus; "emotional-support cacti" — emotional support animals are a known business; cactus variant is a strange adjective bolted on? Somewhat — pet rock territory. B: professional mourners exist historically (real practice), weeping at ex's wedding is new twist; "$500 a tear" pricing is novel. Both arguably "familiar business with strange adjective." Criterion 3: business logic — both make clear why someone pays. A: $40 for plant that never leaves — clear. B: $500 a tear — vivid but maybe less plausible pricing. Criterion 4: turn from laughing to nodding — A's "allergic to... feelings, and commitment" and "a plant that never leaves" is a strong turn. B's "tragedy it deserved" and "$500 a tear" also good. Criterion 5: concrete — A names product (cacti), buyer (lonely apartment dwellers), price. B names service (professional mourners at ex's wedding), buyer (heartbroken clients), price.
+
+First difference: criterion 2? A = emotional-support [X] is a familiar template. B = professional mourners is a real historical thing, but "weep at your ex's wedding" for breakup closure is a new market framing. Hmm. Which is more genuinely bizarre? A's "emotional-support cacti" — emotional support animals are common; cactus variant is derivative. B's professional mourners exist but "ex's wedding" application is unusual. I'd say B slightly more novel. But criterion 3: B's logic holds too — catharsis purchase, $500 a tear is gimmicky pricing but clear. Criterion 4: A has stronger turn.
+
+Follow rule: first criterion where they differ decides unless later differs by much more. If B wins criterion 2 by a hair, and A wins criterion 4 by a bit... does "much more" apply? Probably B wins on 2 modestly; A's edge on 4 isn't "much more." Verdict B, margin 2.
+
+Alternatively could argue A: "plant that never leaves" — poignant. I'll go B margin 2.Verdict: B
+Margin: 2
+=== GAME (rumus house: rata-rata dua call) ===
+GAME: v1.txt 0.750 vs v3.txt 0.250
+GAME WINNER: A (by 0.25)
+=== selesai: 2026-11-24T08:28:08Z ===
