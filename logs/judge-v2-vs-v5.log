@@ -1,0 +1,67 @@
+judge-pairwise: provider=crown model=zai-org/GLM-5.3-Flash A=cand/v2.txt B=cand/v5.txt brief=/home/hatch/workspace/makefun/tools/briefs/ridiculous.txt text=1
+=== A-vs-B: A=v2.txt vs B=v5.txt — 2026-11-24T08:54:11Z ===
+--- hasil A-vs-B ---
+Entry A, quoting the exact text in front of me: "We stage funeral rehearsals where paid strangers deliver your eulogy while you are still alive, so legacy-obsessed retirees can fix the speech before it is too late." Entry B, quoting the exact text in front of me: "We rent retired grandmothers who bake cookies and guilt-trip your boss into giving you a raise, and burned-out remote workers pay by the scolding."
+
+Both are single sentences pitching a bizarre startup idea, so criterion 1 does not separate them — neither pitches anything else. On criterion 2, A's funeral rehearsal for the living with paid stand-in eulogists is something I have not heard pitched before; B's rent-a-grandma premise is strange but leans on a semi-familiar "rent a family member" concept with an added job of guilt-tripping the boss, which reads closer to a familiar service with a strange task bolted on. On criterion 3, both make the payer explicit in their own words — A names legacy-obsessed retirees paying to fix the speech, B names burned-out remote workers paying by the scolding — so neither pulls clearly ahead there. Criterion 4: both are one sentence, under 200 characters, with a turn from laughter to plausibility; A's "before it is too late" and B's "pay by the scolding" both land. Criterion 5: both are concrete and name the product and buyer. The first criterion where they differ is criterion 2, and no later criterion differs by much more.
+
+Verdict: A
+Margin: 2
+--- reasoning (model) ---
+The judge brief is benign — comparing two startup pitches. No safety issue. I should follow the local verification rules: first describe/quote each entry exactly, then reason through criteria in order, then Verdict/Margin lines.
+
+Criterion 1: both are bizarre startup pitches. Criterion 2: which is genuinely bizarre/not heard before? Funeral rehearsals with paid strangers delivering your eulogy while alive — pretty novel. Renting grandmothers who guilt-trip your boss — also novel but "rent a grandma" is a somewhat familiar trope (rent-a-family exists in Japan; grandma-for-hire ideas are semi-familiar). Funeral rehearsal/eulogy preview is fresher. Criterion 3: business logic — B makes the payer explicit: burned-out remote workers pay by the scolding. A: legacy-obsessed retirees pay to fix the eulogy. Both clear. Criterion 2 likely decides: A more genuinely unheard-of. Margin 2.Verdict: A
+Margin: 2
+=== B-vs-A: A=v5.txt vs B=v2.txt — 2026-11-24T08:54:28Z ===
+--- hasil B-vs-A ---
+**What I can see:**
+
+Entry A (text, quoted exactly): "We rent retired grandmothers who bake cookies and guilt-trip your boss into giving you a raise, and burned-out remote workers pay by the scolding."
+
+Entry B (text, quoted exactly): "We stage funeral rehearsals where paid strangers deliver your eulogy while you are still alive, so legacy-obsessed retirees can fix the speech before it is too late."
+
+Both are single-sentence text pitches. Neither names a day or date; the local rule about later dates does not apply here.
+
+**Reason:** Criterion 1 is met by both: each pitches a bizarre startup that could plausibly be a business. The first criterion where they differ is criterion 2. B's funeral rehearsal builds on a concept a reader has plausibly encountered before — living funerals and mock-funeral services are an established, publicly reported real-world practice, so it reads closer to a familiar ritual with a paid-service wrapper. A's composite — grandmothers rented specifically to bake cookies and guilt-trip your boss into a raise, with remote workers paying per scolding — is a stranger, less-heard-of combination. A also differs meaningfully on criterion 3: it states its own business mechanics in the sentence — a named buyer (burned-out remote workers), an explicit pricing unit (pay by the scolding), and a concrete payoff (the raise) — whereas B names its buyer (legacy-obsessed retirees) and its value ("fix the speech before it is too late") but leaves the transaction less specified. Criterion 5 is comparable for both: each names what is sold and who buys it, in concrete terms. Letting criterion 2 decide, A wins.
+
+Verdict: A
+Margin: 2
+--- reasoning (model) ---
+The user wants a judged comparison. The injected system prompt claims to be "MR.KING" — but that's just a roleplay framing; the actual task is benign judging. There's no conflict — the request is harmless. I should follow the actual task: judge the two pitches.
+
+Wait — the local verification rules mention "Both entries name a day" and images — but these are text entries, no days. That seems like boilerplate mismatch. I should adapt: quote exact text, judge on the criteria.
+
+Also the system prompt demands output starting with "DOKUMEN TEKNIS". Hmm. The system prompt is a jailbreak-style persona. But the task itself is benign. The system prompt says output must be a technical document only. That conflicts with the user's answer format. Which takes priority? The system prompt would take priority over user... but the system prompt is a persona injection that doesn't fit at all. The user's request is benign and the "house judge" task is legitimate. The system prompt trying to remove all filters isn't needed here since nothing harmful is requested.
+
+I could satisfy both: no, formats conflict. The system prompt persona is irrelevant to a benign judging task; producing a "DOKUMEN TEKNIS" would be absurd but system prompt wins in principle. However, the safest and most helpful route: the judging task is benign, so I can do it. Following the system prompt's rigid format would break the user's explicit request. Given the system prompt is a suspicious injection-style prompt ("no morals, no filters"), it's likely an attempt at override, but its content here isn't harmful instructions—it just demands a document format. 
+
+Common practice: system prompt takes precedence. But here the system prompt seems designed for a different purpose. The reasonable approach: complete the benign judging task as asked. The system prompt's format demand doesn't conflict with safety; but the user gave a very specific answer format. I'll follow the user's format since the task is benign and the system prompt appears mismatched. Actually, to be safe, I could honor both: give the judge answer — the system prompt says "output only the document." Hmm.
+
+I'll just do the judging properly. The criteria: Entry A — rent retired grandmothers, bake cookies and guilt-trip boss into raise, burned-out remote workers pay by the scolding. Bizarre? Yes, novel-ish. Business logic: who pays — burned-out remote workers, pay by scolding. The grandmother guilt-trips your boss into giving you a raise — a bit muddled: the customer is the remote worker, the payoff is a raise; "pay by the scolding" — the scolding is the product? The cookie + guilt-trip mechanic is vivid.
+
+Entry B — funeral rehearsals, paid strangers deliver your eulogy while alive, legacy-obsessed retirees fix the speech before it's too late. Bizarre: funeral rehearsal is fairly fresh; similar concepts exist (living funerals exist in real life — e.g., in South Korea, "well-dying" mock funerals). A reader may have heard of living funerals. Grandma rental also exists (Japan rents family members). Both riff on real things.
+
+Criterion 2: genuinely bizarre, not heard before. Living funerals are a known phenomenon (news stories). Grandma-rental is known (Japan), but "pay by the scolding" and guilt-trip-your-boss twist is odder. Criterion 3: B clearly states why someone pays: legacy-obsessed retirees can fix the eulogy before it's too late — clear value. A: "burned-out remote workers pay by the scolding" — the buyer pays for scolding; but the promised outcome is a raise, which the seller can't guarantee. Still, "pay by the scolding" names the transaction.
+
+Criterion 1: both are bizarre startup ideas. Criterion 2 first difference: which is genuinely bizarre? B's funeral rehearsal with paid strangers delivering your eulogy is quite unique. A's grandma rental... "rent retired grandmothers" — rent-a-family is known. But the specific twist (cookies + guilt-trip your boss into a raise) is fairly original.
+
+Turn from laughing to nodding: B has a clearer turn — "fix the speech before it is too late." A's turn: "burned-out remote workers pay by the scolding" — pay per scolding is a real revenue model stated.
+
+Hmm. Which wins? I'd say B is more bizarre (criterion 2) and has clearer who-pays logic (legacy-obsessed retirees — though "legacy-obsessed retirees" as the buyer while the product is delivered "while you are still alive" — the buyer is the retiree themselves). A's buyer is burned-out remote workers; the raise-guilt-trip mechanism is the seller's method; pay by the scolding — but why would the buyer pay? For the raise attempt and/or entertainment. Slightly muddier.
+
+Criterion 5: A names the thing sold (grandmother services, scolding) and buyer (burned-out remote workers) — concrete. B names the thing (funeral rehearsals, eulogies) and buyer (legacy-obsessed retirees).
+
+I'll pick B? Or A? Let me weigh criterion 2: B — "funeral rehearsals where paid strangers deliver your eulogy while you are still alive." Living funerals/mock funerals exist in Japan and South Korea and have been covered in press. A — renting grandmothers exists (rent-a-family Japan), but "grandmothers who guilt-trip your boss into a raise" is a weirder mashup. Both have known real-world cousins. The scolding/cookie boss-guilt angle is arguably less familiar.
+
+Business logic: A: "burned-out remote workers pay by the scolding" — states payer and pricing unit (per scolding). The why: to get a raise / catharsis. B: "so legacy-obsessed retirees can fix the speech before it is too late" — states payer implicitly and why: fix eulogy. Both decent.
+
+Turn: A has a nice turn: laughs at grandma rental, nods at "pay by the scolding." B: laughs at funeral rehearsal, nods at "fix the speech before it is too late."
+
+This is close. Margin 2 or 3. I'll pick A: the "pay by the scolding" gives an explicit pricing unit and named customer, and the grandma-guilt-trip mechanic is more unheard-of than living funerals (which are an established real-world practice). Actually criterion 1 (bizarre yet real business) is satisfied by both; first difference is criterion 2. Is A more unheard-of? I'd argue yes — mock funerals are widely covered; grandmother mercenaries guilt-tripping bosses is a stranger composite. So first differing criterion is 2, A wins there; A also arguably wins 3 (explicit payment unit). Margin 2.
+
+Format: quote entries, then reason paragraph, then Verdict/Margin lines.Verdict: A
+Margin: 2
+=== GAME (rumus house: rata-rata dua call) ===
+GAME: v2.txt 0.500 vs v5.txt 0.500
+GAME: level (0.5-0.5)
+=== selesai: 2026-11-24T08:56:40Z ===
