@@ -1,0 +1,48 @@
+judge-pairwise: provider=crown model=zai-org/GLM-5.3-Flash A=cand/v2.txt B=cand/v3.txt brief=/home/hatch/workspace/makefun/tools/briefs/ridiculous.txt text=1
+=== A-vs-B: A=v2.txt vs B=v3.txt — 2026-11-24T08:45:07Z ===
+--- hasil A-vs-B ---
+What I can see in each entry:
+
+Entry A (verbatim): "We stage funeral rehearsals where paid strangers deliver your eulogy while you are still alive, so legacy-obsessed retirees can fix the speech before it is too late." One sentence, well under 200 characters. It names a service (funeral rehearsals with paid eulogy deliverers while the client is alive), the buyer (legacy-obsessed retirees), and the reason to pay (fixing the speech in advance).
+
+Entry B (verbatim): "We breed emotional-support cacti for people allergic to pets, feelings, and commitment, and lonely apartment dwellers pay $40 for a plant that never leaves." One sentence, well under 200 characters. It names a product (emotional-support cacti), the buyer (lonely apartment dwellers), and a price ($40). No date, day, image, or extra material is present in either entry, and I note nothing beyond the text above.
+
+Reason: On criterion 1, both entries pitch a bizarre startup idea that sounds ridiculous at first glance yet makes sense as a real business, so neither loses there. Criterion 2 is the first where they differ: funeral rehearsals with paid strangers delivering live eulogies is a genuinely unfamiliar service, whereas "emotional-support cacti" is recognisably the familiar emotional-support-animal business with a strange noun swapped in — closer to a familiar concept with the strangeness bolted on, which the brief explicitly discounts. Criterion 3 holds for both (A makes the reason to pay explicit; B gives a concrete $40 price), and both satisfy criteria 4 and 5, but criterion 2 already decides. Entry A better meets the brief.
+
+Verdict: A
+Margin: 2
+--- reasoning (model) ---
+Verify entries, judge per brief. Both are one sentence, under 200 chars. Both bizarre startup pitches. Criterion order:
+
+1. Both pitch bizarre-but-real businesses — both satisfy.
+2. Genuinely bizarre: funeral rehearsals with paid strangers delivering eulogies — unusual, though "living funerals" exist as a known concept. Emotional-support cacti — "emotional support X" is a familiar meme pattern (emotional support animals → cactus is a strange adjective bolted on, arguably). Criterion 2: "not a familiar business with a strange adjective bolted on." Cacti = emotional support animals swapped; funeral rehearsals = novel service. A seems more genuinely bizarre.
+3. Business logic: B states buyer ("lonely apartment dwellers") and price ($40). A states buyer ("legacy-obsessed retirees") and why they pay (fix the speech). Both hold.
+4. Both one sentence under 200 chars with a turn.
+5. Concrete: both name who buys.
+
+First criterion where they differ: 2. A is more genuinely novel; B is arguably "emotional support animal" pattern with cactus swap. A wins.
+
+Also proxy rule about dates doesn't apply (no dates). The "both entries name a day" rule is irrelevant here — ignore; not applicable.
+
+Verdict: A, margin 2-3. I'll say 2.Verdict: A
+Verdict: A
+Margin: 2
+=== B-vs-A: A=v3.txt vs B=v2.txt — 2026-11-24T08:46:19Z ===
+--- hasil B-vs-A ---
+What I can see in each entry:
+
+**Entry A (exact text):** "We breed emotional-support cacti for people allergic to pets, feelings, and commitment, and lonely apartment dwellers pay $40 for a plant that never leaves."
+
+**Entry B (exact text):** "We stage funeral rehearsals where paid strangers deliver your eulogy while you are still alive, so legacy-obsessed retirees can fix the speech before it is too late."
+
+**Reason:** Criterion 1: both pitch bizarre startups, so neither loses on that ground. Criterion 2 is where they first differ clearly: "emotional-support cacti" is a familiar concept (emotional-support animals, plant subscription services) with a strange substitution bolted on, whereas staged funeral rehearsals with hired eulogy actors while the client is alive is something a reader genuinely has not heard before. Criterion 3 holds for both — A states who pays and how much ($40, lonely apartment dwellers), B states who pays (legacy-obsessed retirees) and why (fix the speech before it is too late) — but neither differs by much more here than the gap at criterion 2. Criterion 4: both are one sentence, under 200 characters, with a turn from absurd to sensible ("never leaves" in A; "before it is too late" in B), with B's turn arguably sharper. Criterion 5: both name the thing sold and the buyer concretely. The deciding criterion is 2, where B is genuinely the stranger, unheard-of idea.
+
+Verdict: B
+Margin: 3
+--- reasoning (model) ---
+Both pitches are bizarre startups. Criterion 2: Entry A "emotional-support cacti" — emotional support animals is familiar; emotional-support cactus is a twist on familiar business with strange adjective? It's fairly heard-before territory (plant subscriptions, emotional support anything). Entry B "funeral rehearsals with paid strangers delivering your eulogy while alive" — genuinely novel, unheard-of. Criterion 3: B makes why pay clear ("fix the speech before it is too late"), A also ($40, never leaves — the "never leaves" is the turn). B is genuinely more bizarre and business logic clear. Also B has a strong turn. Pick B, margin 3.Verdict: B
+Margin: 3
+=== GAME (rumus house: rata-rata dua call) ===
+GAME: v2.txt 0.750 vs v3.txt 0.250
+GAME WINNER: A (by 0.25)
+=== selesai: 2026-11-24T08:53:26Z ===
